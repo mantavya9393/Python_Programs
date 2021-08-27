@@ -1,3 +1,5 @@
+# created my own JARVIS (voice assistance) in python.
+
 import speech_recognition as sr
 import pyttsx3
 import time
