@@ -51,10 +51,7 @@ def commands():
 
             if text == "how are you":
                 speak("I am fine, how are you?")
-                time.sleep(1)
-            elif text == "kem cho" or text == "KEM chho":
-                speak("iik dum majama boss, tamae kem cho?....also I prefer english")
-                time.sleep(1)
+                time.sleep(1)   
             elif text == "hello" or text == "hi":
                 speak("Hello Boss")
                 time.sleep(1)
