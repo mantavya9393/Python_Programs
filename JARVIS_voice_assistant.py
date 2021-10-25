@@ -38,10 +38,11 @@ def intro():
     speak("Ok.." + name + "....what are you up to?")
 
 def commands():
-    try:
-        text = ""
-        while text != "bye" or text != "no" or text == "stop":
-            print("Please talk and say Bye or NO to Stop...")
+
+    text = ""
+    while text != "bye" or text != "no" or text == "stop":
+        print("Please talk and say Bye or NO to Stop...")
+        try:
             with sr.Microphone() as source:
                 audio_data = r.record(source, duration=4)
                 print("Recognizing.....")
@@ -124,11 +125,8 @@ def commands():
                 speak("sorry..I didn't get that, Say again?")
             else:
                 speak("sorry..I didn't get that, Say again?")
-    except sr.RequestError as e:
-        print("error; {0}".format(e))
-    except Exception as e:
-        print(e)
-        speak("sorry..I didn't get that, please run the program again")
+        except :
+            speak("sorry..I didn't get that, please say it again")
 
 
 greetings()
